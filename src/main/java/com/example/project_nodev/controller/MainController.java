@@ -1,8 +1,10 @@
 package com.example.project_nodev.controller;
 
+import com.example.project_nodev.entity.Answer;
 import com.example.project_nodev.entity.Cat;
 import com.example.project_nodev.entity.User;
 import com.example.project_nodev.repository.UserRepository;
+import com.example.project_nodev.service.AnswerService;
 import com.example.project_nodev.service.CatService;
 import com.example.project_nodev.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,8 @@ public class MainController {
     private CatService catService;
     @Autowired
     private UserService userService;
+    @Autowired
+    private AnswerService answerService;
 
     @GetMapping("/main")
     public String main(){
@@ -180,6 +184,16 @@ public class MainController {
         catService.catDelete(id);
 
         return "redirect:/cat/location";
+    }
+
+    @PostMapping("/location/create/{id}")
+    public String createAnswer(Answer answer, Model model, @PathVariable("id") Integer id, @RequestParam(value="content") String content) {
+        Cat cat = catService.catView(id);
+        answer.setCat(cat); // Answer 객체의 cat 필드 설정
+        answerService.create(answer, content);
+        model.addAttribute("answer", answerService.answerList());
+        //catService.create(cat,content);
+        return ("redirect:/cat/location");
     }
 
 

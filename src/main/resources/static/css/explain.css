@@ -1,0 +1,104 @@
+/* 전체 스타일 */
+body {
+    font-family: 'Jua', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 상단 바 스타일 */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.texts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.buttons {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    margin-left: 20px;
+}
+
+.button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 내용 영역 스타일 */
+.contents {
+    padding: 40px;
+}
+
+.frame {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-who {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.info-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.info-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 하단 바 스타일 */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}

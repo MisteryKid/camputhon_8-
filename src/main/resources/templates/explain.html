@@ -1,57 +1,92 @@
-
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>explain</title>
-    <link rel="stylesheet" href="explain.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link  th:href="@{/css/explain.css}" rel="stylesheet">
+    <link rel="icon" href="logo.png">
 </head>
 
 <body>
 <!-- 상단 바 (로고 + 위치,병원,후원)-->
 <header>
     <div class="texts">
-        <div class="logo">
-            <img src="고양이발바닥"
-                 alt="고양이발바닥">
-            <span>동국이를 찾아라</span>
-        </div>
-        <div class="buttons">
-            <a th:href="@{/cat/location}">어딨냥!</a>
-            <a th:href="@{/cat/hospital}">모이라냥</a>
-            <a th:href="@{/cat/donate}">배고프다냥</a>
+            <span class="logo">
+                <img src="">
+                <span>동국이를 찾아라</span>
+            </span>
+        <!-- 여기 고침 : div -> ol -->
+        <span>
+                <ol class="buttons">
+                    <li class="button"> <a th:href="@{/cat/location}">어딨냥!</a></li>
+                    <li class="button"><a th:href="@{/cat/hospital}">모이라냥</a></li>
+                    <li class="button"> <a th:href="@{/cat/donate}">배고프다냥</a></li>
 
-        </div>
+                </ol>
+            </span>
     </div>
 </header>
 
 <!-- contents 내용 allprofiles(profile1 + profile2 + ...)-->
-<contents>
-    <div class="allprofiles">
-        <div class="profile">
-            <div class="who">프로필 정보다냥</div>
-            <div class="info">
-                <img src=""
-                     alt="동국이 사진">
-                <div class="description">
-                    <div class="profile_name">이름 : 동국이</div>
-                    <div class="profile_description">설명: 안녕하다냥! 난 동국이다냥!</div>
+<div class="contents">
+    <div class="frame">
+        <!-- 추가 profile 1 -->
+        <div class="profile" style="width: 80%">
+            <div class="profile-container">
+                <div class="profile-who">프로필 정보다냥</div>
+                <div class="profile-info">
+                    <img class="info-picture" src="">
+                    <div class="info-container">
+                        <div class="info-name">이름 : 동국이</div>
+                        <div class="info_description">설명: 안녕하다냥! 난 동국이다냥!</div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- 추가 profile 2.3.... -->
-    </div>
-</contents>
+        <!-- 추가 profile 2 -->
+        <div class="profile">
+            <div class="profile-container">
+                <div class="profile-who">프로필 정보다냥</div>
+                <div class="profile-info">
+                    <img class="info-picture" src="">
+                    <div class="info-container">
+                        <div class="info-name">이름 : 동국이</div>
+                        <div class="info_description">설명: 안녕하다냥! 난 동국이다냥!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<!-- 하단 바 -->
-<footer>
-    <div class="texts">
-        <p> 동국이를 찾아라</p>
-        <p> 인천시 연수구 해송로 70</p>
-        <p> 추가문의 032) 851 - 0369</p>
+        <!-- 추가 profile 3 -->
+        <div class="profile">
+            <div class="profile-container">
+                <div class="profile-who">프로필 정보다냥</div>
+                <div class="profile-info">
+                    <img class="info-picture" src="">
+                    <div class="info-container">
+                        <div class="info-name">이름 : 동국이</div>
+                        <div class="info_description">설명: 안녕하다냥! 난 동국이다냥!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
-</footer>
+    </contents>
+
+    <!-- 하단 바 -->
+    <footer>
+        <div class="texts">
+            <p> 동국이를 찾아라</p>
+            <p> 인천시 연수구 해송로 70</p>
+            <p> 추가문의 032 - 851 - 0369</p>
+        </div>
+    </footer>
 </body>
 </html>

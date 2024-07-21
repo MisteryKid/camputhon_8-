@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Service
@@ -61,5 +62,12 @@ public class CatService {
 
     public void catDelete(Integer id) {
         catRepository.deleteById(id);
+    }
+
+    public void create(Cat cat, String content) {
+        cat.setContent(content);
+        cat.setTime(LocalDateTime.now());
+
+        catRepository.save(cat);
     }
 }

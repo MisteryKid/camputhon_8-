@@ -1,13 +1,11 @@
 package com.example.project_nodev.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -28,4 +26,7 @@ public class Cat {
     private String filepath;
 
     private LocalDateTime time; // 업로드
+
+    @OneToMany(mappedBy = "cat", cascade = CascadeType.REMOVE)
+    private List<Answer> answerList;
 }
