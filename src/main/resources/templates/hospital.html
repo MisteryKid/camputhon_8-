@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>hospital</h1>
+
+<div id="map" style="width:80%;height:400px;"></div>
+
+
+<script  type="text/javascript"
+         src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=zf1gi2srt2"></script>
+<script>
+    var position = new naver.maps.LatLng(37.56192, 126.9982);
+
+    var map = new naver.maps.Map('map', {
+        center: position,
+        zoom: 17
+    });
+
+    var markerOptions = {
+        position: position.destinationPoint(0, 20),
+        map: map,
+        icon: {
+            url: 'https://navermaps.github.io/maps.js.ncp/docs/img/example/sally.png',
+            size: new naver.maps.Size(50, 52),
+            origin: new naver.maps.Point(0, 0),
+            anchor: new naver.maps.Point(25, 26)
+        }
+    };
+
+    var marker = new naver.maps.Marker(markerOptions);
+</script>
+
+
+</body>
+</html>
