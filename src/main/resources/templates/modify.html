@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 글 작성</title>
+
+</head>
+<style>
+    .layout{
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    .layout  input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .layout  textarea{
+        width: 100%;
+        margin-top: 10px;
+        min-height: 300px;
+    }
+
+</style>
+<body>
+<div class="layout">
+    <form th:action="@{/cat/location/update/{id}(id = ${cat.id})}" method="post" enctype="multipart/form-data">
+        <input name="title" type="text" th:value="${cat.title}">
+        <textarea name="content" th:text="${cat.content}"></textarea>
+        <input type="file" name="file">
+
+        <img th:text="${cat.filepath}" alt="현재 파일" style="max-width: 50%; height: auto;">
+        <button type="submit">수정</button>
+
+    </form>
+</div>
+</body>
+</html>

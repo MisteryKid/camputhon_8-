@@ -39,7 +39,14 @@ public class MainController {
                             @PageableDefault(page = 0,size = 10,sort = "id",direction = Sort.Direction.DESC) Pageable pageable,
                             @RequestParam(name="searchKeyword", required = false) String searchKeyword){
 
-        Page<Cat> list = catService.catList(pageable);
+        Page<Cat> list = null;
+
+        if(searchKeyword == null) {
+            list = catService.catList(pageable);
+        }else {
+            list = catService.catSearchList(searchKeyword, pageable);
+        }
+
 
         int nowPage= list.getPageable().getPageNumber() +1;
         int startPage= Math.max(nowPage -4,1) ;
@@ -133,16 +140,29 @@ public class MainController {
 
 
     ///////////////////////////////////////////////// 사진 수정 /////////////////////////////////////////////////
+
+    @GetMapping("/location/modify/{id}")
+    public String catModify(@PathVariable("id") Integer id, Model model){
+        model.addAttribute("cat",catService.catView(id));
+        return "modify";
+    }
+
     @PostMapping("/location/update/{id}")
-    public String boardUpdate(@PathVariable("id") Integer id, Cat cat,
-                              @RequestParam(name="file", required = false) MultipartFile file) throws Exception {
+    public String catUpdate(@PathVariable("id") Integer id, Cat cat,
+                              @RequestParam(name="file", required = false) MultipartFile file)
+            throws Exception {
 
         Cat catTemp = catService.catView(id);
         catTemp.setContent(cat.getContent());
         catTemp.setTitle(cat.getTitle());
+        catTemp.setFilepath(cat.getFilepath());
+        catTemp.setFilename(cat.getFilename());
 
         catService.write(catTemp, file);
+
         return "redirect:/cat/location";
+
+        //return "redirect:/cat/location";
     }
 
     @GetMapping("/location/view")
