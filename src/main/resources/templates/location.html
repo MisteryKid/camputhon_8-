@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>explain</title>
-    <link rel="stylesheet" href="explain.css">
+    <link rel="stylesheet" th:href="@{/css/recolor.css}">
 </head>
 
 <body>
@@ -12,8 +12,6 @@
 <header>
     <div class="texts">
         <div class="logo">
-            <img src="고양이발바닥"
-                 alt="고양이발바닥">
             <span>동국이를 찾아라</span>
         </div>
         <div class="buttons">
@@ -24,41 +22,22 @@
     </div>
 </header>
 
-<!-- contents 내용 allprofiles(profile1 + profile2 + ...)-->
-<contents>
+
     <div class="box_container">
-        <div class="box">
-            <div class="box_header">2024-07-21-00:12</div>
-
-            <div class="box_body" th:each="cat:${list}">
-                <img src="" alt="사진">
-                <div class="loca_descri">
-                    <div class="location">
-
-                        <span th:href="${cat.title}">  </span>
-                        <span th:href="${cat.content}">  </span>
-
-                    </div>
-                    <div class="description">
-                        <h1 ></h1>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- 추가 box 2.3.... -->
-        </div>
 
         <table>
             <thead>
             <tr th:each="cat:${list}">
-                <th th:text="${cat.title}"> 아이디 </th>
-                <th th:text="${cat.content}">글 제목 </th>
-
+                <td>
+                    <a th:text="${cat.title}" th:href="@{location/view(id=${cat.id})}"></a>
+                </td>
+                <td th:text="${cat.content}"></td>
+                <td th:text="${cat.time}"></td>
             </tr>
             </thead>
         </table>
-</contents>
+    </div>
+
 
 <!-- 하단 바 -->
 <footer>

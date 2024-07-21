@@ -7,6 +7,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 public class Cat {
@@ -21,5 +23,9 @@ public class Cat {
 
     private String content; // 어딨냥 글 내용
 
-    private String pic; // 사진 자료
+    private String filename; // 사진 자료
+
+    private String filepath;
+
+    private LocalDateTime time; // 업로드
 }

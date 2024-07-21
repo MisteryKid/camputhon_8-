@@ -1,0 +1,63 @@
+/* 전체적인 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.texts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttons a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* 컨텐츠 스타일 */
+.box_container {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.texts p {
+    margin: 5px 0;
+}

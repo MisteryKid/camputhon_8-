@@ -23,7 +23,7 @@
     </div>
 </header>
 
-<form action="/cat/listwritepro" method="post">
+<form action="/cat/location/writepro" method="post" enctype="multipart/form-data">
 <div class="contents">
     <div class="title">
         제목 <br>
@@ -37,7 +37,7 @@
 
     <div class="file">
         파일첨부 <br>
-        <input type="file">
+        <input type="file" name="file">
     </div>
 
     <button type="submit">작성</button>
