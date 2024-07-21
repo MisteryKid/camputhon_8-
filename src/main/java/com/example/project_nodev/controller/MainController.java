@@ -120,11 +120,15 @@ public class MainController {
     //여기 주소 좀 이상함 확인 ㄱ
 
     @PostMapping("/location/writepro")
-    public String locationwritepro(Cat cat, @RequestParam(name="file", required = false) MultipartFile file) throws Exception {
+    public String locationwritepro(Model model, Cat cat, @RequestParam(name="file", required = false) MultipartFile file) throws Exception {
 
         catService.write(cat, file);
 
-        return "redirect:/cat/location";
+        model.addAttribute("message", "글 작성이 완료되었습니다.");
+        model.addAttribute("searchUrl", "/cat/location");
+
+
+        return "message";
     }
 
 

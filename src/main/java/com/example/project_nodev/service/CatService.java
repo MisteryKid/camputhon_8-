@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
-import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -20,11 +19,11 @@ public class CatService {
     @Autowired
     private CatRepository catRepository;
 
-    public void write(Cat cat, @RequestParam(name="file", required = false) MultipartFile file)throws Exception{
+    public void write(Cat cat, @RequestParam(name="file") MultipartFile file)throws Exception{
 
 
         //저장경로 지정
-        String projectPath = System.getProperty("user.dir")+"\\src\\main\\resources\\static\\files\\";
+        String projectPath = System.getProperty("user.dir")+"\\src\\main\\resources\\static\\files";
 
 
         UUID uuid = UUID.randomUUID();

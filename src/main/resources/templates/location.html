@@ -29,6 +29,8 @@
             <thead>
             <tr th:each="cat:${list}">
                 <td>
+                <img th:src="@{${cat.filepath}}" alt="이미지" style="max-width: 10%; height: auto;"></td>
+                <td>
                     <a th:text="${cat.title}" th:href="@{location/view(id=${cat.id})}"></a>
                 </td>
                 <td th:text="${cat.content}"></td>
@@ -37,6 +39,7 @@
             </thead>
         </table>
     </div>
+
 
 
 <!-- 하단 바 -->
