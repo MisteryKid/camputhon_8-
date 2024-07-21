@@ -20,4 +20,6 @@ public class Cat {
     private String summary; // 어딨냥 글 소개
 
     private String content; // 어딨냥 글 내용
+
+    private String pic; // 사진 자료
 }

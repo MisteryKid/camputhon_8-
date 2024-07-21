@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,6 +7,13 @@
 <body>
 
 <h1>hospital</h1>
+<div class="buttons">
+    <a th:href="@{/cat/location}">어딨냥!</a>
+    <a th:href="@{/cat/hospital}">모이라냥</a>
+    <a th:href="@{/cat/donate}">배고프다냥</a>
+
+</div>
+
 
 <div id="map" style="width:80%;height:400px;"></div>
 
@@ -34,7 +41,6 @@
 
     var marker = new naver.maps.Marker(markerOptions);
 </script>
-
 
 </body>
 </html>

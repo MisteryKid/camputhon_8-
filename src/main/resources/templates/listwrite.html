@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>writepage</title>
+    <link rel="stylesheet" href="static/write.css">
+</head>
+<body>
+<!-- 상단 바 (로고 + 위치,병원,후원)-->
+<header>
+    <div class="texts">
+        <div class="logo">
+            <img src="#">
+            <span>동국이를 찾아라</span>
+        </div>
+        <div class="buttons">
+            <a th:href="@{/cat/location}">어딨냥!</a>
+            <a th:href="@{/cat/hospital}">모이라냥</a>
+            <a th:href="@{/cat/donate}">배고프다냥</a>
+        </div>
+    </div>
+</header>
+
+<form action="/cat/listwritepro" method="post">
+<div class="contents">
+    <div class="title">
+        제목 <br>
+        <input type="text" name="title" placeholder="제목을 입력하세요">
+    </div>
+
+    <div class="content">
+        내용 <br>
+        <input type="text" name="content" placeholder="내용을 입력하세요">
+    </div>
+
+    <div class="file">
+        파일첨부 <br>
+        <input type="file">
+    </div>
+
+    <button type="submit">작성</button>
+</div>
+</form>
+<!-- 하단 바 -->
+<footer>
+    <div class="texts">
+        <p> 동국이를 찾아라</p>
+        <p> 인천시 연수구 해송로 70</p>
+        <p> 추가문의 032 - 851 - 0369</p>
+    </div>
+</footer>
+</body>
+</html>

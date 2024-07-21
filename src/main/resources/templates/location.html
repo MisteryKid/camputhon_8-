@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>explain</title>
-    <link ref="stylesheet" href="explain.css">
+    <link rel="stylesheet" href="explain.css">
 </head>
 
 <body>
@@ -17,9 +17,9 @@
             <span>동국이를 찾아라</span>
         </div>
         <div class="buttons">
-            <a href="../location.html">어딨냥!</a>
-            <a href="../hospital.html">모이라냥</a>
-            <a href="../dontate.html">배고프다냥</a>
+            <a th:href="@{/cat/location}">어딨냥!</a>
+            <a th:href="@{/cat/hospital}">모이라냥</a>
+            <a th:href="@{/cat/donate}">배고프다냥</a>
         </div>
     </div>
 </header>
@@ -29,22 +29,35 @@
     <div class="box_container">
         <div class="box">
             <div class="box_header">2024-07-21-00:12</div>
-            <div class="box_body">
-                <img src=""
-                     alt="사진">
+
+            <div class="box_body" th:each="cat:${list}">
+                <img src="" alt="사진">
                 <div class="loca_descri">
                     <div class="location">
-                        <img src=""
-                             alt="아이콘">
-                        <span> 위치 : 사회과학관 3층 문앞 </span>
+
+                        <span th:href="${cat.title}">  </span>
+                        <span th:href="${cat.content}">  </span>
+
                     </div>
                     <div class="description">
-                        뜨끈하게 식빵 굽는 동국이 공유합니다~
+                        <h1 ></h1>
                     </div>
                 </div>
             </div>
+
+
             <!-- 추가 box 2.3.... -->
         </div>
+
+        <table>
+            <thead>
+            <tr th:each="cat:${list}">
+                <th th:text="${cat.title}"> 아이디 </th>
+                <th th:text="${cat.content}">글 제목 </th>
+
+            </tr>
+            </thead>
+        </table>
 </contents>
 
 <!-- 하단 바 -->
@@ -55,5 +68,6 @@
         <p> 추가문의 032) 851 - 0369</p>
     </div>
 </footer>
+
 </body>
 </html>

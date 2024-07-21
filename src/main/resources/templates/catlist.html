@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/cat/location}">어딨냥!</a>
+<a th:href="@{/cat/hospital}">모이라냥</a>
+<a th:href="@{/cat/donate}">배고프다냥</a>
+
+
+<div class="layout">
+    <table>
+        <thead>
+        <tr th:each="cat:${list}">
+            <th th:text="${cat.title}"> 아이디 </th>
+            <th th:text="${cat.content}">글 제목 </th>
+            <th th:text="${cat.pic}">사진</th>
+        </tr>
+        </thead>
+    </table>
+
+</div>
+
+
+
+</body>
+</html>
+
