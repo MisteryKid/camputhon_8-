@@ -7,9 +7,9 @@
     <title>explain</title>
 
     <link rel="stylesheet" th:href="@{/css/explain.css}">
+    <script th:src="@{/js/write.js}"></script>
 
 
-    <link rel="icon" href="logo.png">
 </head>
 
 <body>
@@ -17,8 +17,8 @@
 <header>
     <div class="texts">
             <span class="logo">
-                <img th:src="@{/files/cat/동국이1.jpg}" style="width: 20%">
-                <span>동국이를 찾아라</span>
+                <img class="info-picture" th:src="@{/files/cat/logo_final.png}" style="width: 20%">
+
             </span>
         <!-- 여기 고침 : div -> ol -->
         <span>
@@ -38,8 +38,7 @@
             <div class="profile-container">
                 <div class="profile-who">프로필 정보다냥</div>
                 <div class="profile-info">
-
-                    <img class="info-picture" th:src="@{/files/cat/동국캐릭1.jpg}" style="width: 20%">
+                    <img class="info-picture" th:src="@{/files/cat/동국캐릭1.png}" style="width: 20%">
                     <div class="info-container">
                         <div class="info-name">이름 : 동국이</div>
                         <div class="info_description">설명: 안녕하다냥! 난 동국이다냥!</div>
@@ -53,7 +52,7 @@
             <div class="profile-container">
                 <div class="profile-who">프로필 정보다냥</div>
                 <div class="profile-info">
-                    <img class="info-picture" src="cat_saerom.png">
+                    <img class="info-picture" th:src="@{/files/cat/동국캐릭2.png}" style="width: 20%">
                     <div class="info-container">
                         <div class="info-name">이름 : 새롬이</div>
                         <div class="info_description">설명: 안녕하다냥! 난 동국이다냥!</div>
@@ -64,6 +63,11 @@
 
     </div>
     </contents>
+
+    <div class="paw-prints">
+        <img th:src="@{/files/cat/logo.png}" alt="Paw Print" class="paw-print">
+        <!-- 더 많은 발자국 이미지 추가 가능 -->
+    </div>
 
 
     <!-- 하단 바 -->

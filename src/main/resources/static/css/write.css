@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Jua", sans-serif;
+}
+/* ************ */
+
+header {
+    width: auto;
+    margin: auto;
+    display: flex;
+    height: 130px;
+    background-color: #FFD8BE;
+    display: flex;
+    text-align: center;
+}
+
+/* header 끝 */
+
+/* contents 시작 */
+
+.contents {
+    margin: auto;
+    height: 760px;
+    background: #F8F7FF;
+}
+
+.title {
+    position: relative;
+    top: 77px;
+}
+
+.title > input {
+    width: 1129px;
+    height: 75px;
+    position: relative;
+    left: 250px;
+    border-radius: 10px 10px 0px 0px;
+    font-family: "Jua", sans-serif;
+
+}
+
+.content {
+    position: relative;
+    top: 78px;
+}
+
+.content > input {
+    width: 1128px;
+    height: 424px;
+    position: relative;
+    left: 250px;
+    border-radius: 0px 0px 10px 10px;
+    font-family: "Jua", sans-serif;
+}
+
+.file {
+    position: relative;
+    top: 79px;
+    left: 252px;
+}
+
+.post {
+    position: relative;
+    top: 78px;
+    left: 1300px;
+
+}
+
+.post > a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* contents끝 */
+/* footer 시작 */
+
+footer {
+    position: relative;
+    height: auto;
+    background: green;
+}
