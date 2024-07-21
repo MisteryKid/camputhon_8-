@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <div class="texts">
+            <span class="logo_loca">
+                <img class="info-picture" th:src="@{/files/cat/logo_final.png}"
+                th:href="@{/cat/main}">
+            </span>
+        <!-- 여기 고침 : div -> ol -->
+        <span>
+                <ol class="buttons">
+                    <li class="button"> <a th:href="@{/cat/location}">찾아달라냥</a> </li>
+                    <li class="button"> <a th:href="@{/cat/hospital}">친해지자냥</a> </li>
+                </ol>
+            </span>
+    </div>
+</header>
+
+
+<div class="layout">
+    <table>
+        <thead>
+        <tr th:each="cat:${list}">
+            <th th:text="${cat.title}" th:href="@{/cat/view(id=${cat.id})}"> 아이디 </th>
+            <th th:text="${cat.content}">글 제목 </th>
+            <th th:text="${cat.pic}">사진</th>
+        </tr>
+        </thead>
+    </table>
+
+</div>
+
+<a th:href="@{/cat/location/write}">글쓰기</a>
+
+
+
+</body>
+</html>
+

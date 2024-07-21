@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>explain</title>
-    <link rel="stylesheet" th:href="@{/css/location.css}">
+    <link rel="stylesheet" th:href="@{/css/prac.css}">
+    <link rel="stylesheet" th:href="@{/css/write2.css}">
 </head>
 
 <body>
 <!-- 상단 바 (로고 + 위치,병원,후원)-->
 <header>
     <div class="texts">
-        <div class="logo">
-            <img class="info-picture" th:src="@{/files/cat/logo_final.png}" style="width: 20%">
-        </div>
-        <div class="buttons">
-            <a th:href="@{/cat/location}">어딨냥!</a>
-            <a th:href="@{/cat/hospital}">모이라냥</a>
-            <a th:href="@{/cat/donate}">배고프다냥</a>
-            <a th:href="@{/cat/location/write}">인증샷</a>
-        </div>
+            <span class="logo_loca">
+                <img class="info-picture" th:src="@{/files/cat/logo_final.png}" >
+            </span>
+        <!-- 여기 고침 : div -> ol -->
+        <span>
+                <ol class="buttons">
+                    <li class="button"> <a th:href="@{/cat/explain}">집이다냥</a> </li>
+                    <li class="button"> <a th:href="@{/cat/location}">찾아달라냥</a> </li>
+                    <li class="button"> <a th:href="@{/cat/hospital}">친해지자냥</a> </li>
+                </ol>
+            </span>
     </div>
 </header>
 
@@ -30,7 +33,7 @@
             <thead>
             <tr th:each="cat:${list}">
                 <td>
-                <img th:src="@{${cat.filepath}}" alt="이미지" style="max-width: 10%; height: auto;"></td>
+                <img th:src="@{${cat.filepath}}" alt="이미지" style="max-width: 10%; margin-left: 100px; height: auto;"></td>
                 <td>
                     <a th:text="${cat.title}" th:href="@{location/view(id=${cat.id})}"></a>
                 </td>
@@ -53,7 +56,7 @@
     <button type="submit">검색</button>
 </form>
 
-
+<a th:href="@{/cat/location/write}">글쓰기</a>
 
 <!-- 하단 바 -->
 <footer>

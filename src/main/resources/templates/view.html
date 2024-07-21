@@ -3,22 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>게시판</title>
-  <link rel="stylesheet" href="/css/view.css">
+
+    <link rel="stylesheet" th:href="@{/css/write2.css}">
 </head>
 <body>
 
 <header>
-  <div class="logo">
-    <img src="/path/to/logo.png" alt="Logo">
-  </div>
-  <div class="buttons">
-    <a th:href="@{/cat/location}">어딨냥!</a>
-    <a th:href="@{/cat/hospital}">모이라냥</a>
-    <a th:href="@{/cat/donate}">배고프다냥</a>
-    <a th:href="@{/cat/location/write}">인증샷</a>
-  </div>
-
+    <div class="texts">
+            <span class="logo_loca">
+                <img class="info-picture" th:src="@{/files/cat/logo_final.png}" style="width: 20%" >
+            </span>
+        <!-- 여기 고침 : div -> ol -->
+        <span>
+                <ol class="buttons">
+                    <li class="button"> <a th:href="@{/cat/explain}">집이다냥</a> </li>
+                    <li class="button"> <a th:href="@{/cat/location}">찾아달라냥</a> </li>
+                    <li class="button"> <a th:href="@{/cat/hospital}">친해지자냥</a> </li>
+                </ol>
+            </span>
+    </div>
 </header>
+
 
 
   <h1 th:text="${cat.title}">제목입니다.</h1>
@@ -52,9 +57,6 @@
   <textarea name="content" id="content" rows="15"></textarea>
   <input type="submit" value="답변등록">
 </form>
-
-
-
 
 </body>
 </html>

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>게시판 글 작성</title>
 
+    <link rel="stylesheet" th:href="@{/css/explain.css}">
+    <link rel="stylesheet" th:href="@{/css/write2.css}">
+
 </head>
 <style>
     .layout{
@@ -26,11 +29,18 @@
 <body>
 
 <header>
-    <div class="buttons">
-        <a th:href="@{/cat/location}">어딨냥!</a>
-        <a th:href="@{/cat/hospital}">모이라냥</a>
-        <a th:href="@{/cat/donate}">배고프다냥</a>
-        <a th:href="@{/cat/location/write}">인증샷</a>
+    <div class="texts">
+            <span class="logo_loca">
+                <img class="info-picture" th:src="@{/files/cat/logo_final.png}" style="width: 20%" >
+            </span>
+        <!-- 여기 고침 : div -> ol -->
+        <span>
+                <ol class="buttons">
+                    <li class="button"> <a th:href="@{/cat/explain}">집이다냥</a> </li>
+                    <li class="button"> <a th:href="@{/cat/location}">찾아달라냥</a> </li>
+                    <li class="button"> <a th:href="@{/cat/hospital}">친해지자냥</a> </li>
+                </ol>
+            </span>
     </div>
 </header>
 <div class="layout">

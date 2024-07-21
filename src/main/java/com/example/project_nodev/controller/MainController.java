@@ -68,16 +68,17 @@ public class MainController {
     @GetMapping("/hospital")
     public String hospital(){
 
-        return "hospital";
+        return "friends";
     }
 
     ///////////////////////////////////////////////// 기부 /////////////////////////////////////////////////
+    /* 결제 api 구현 복잡한 관계로 폐기
     @GetMapping("/donate")
     public String donate(){
 
         return "donate";
     }
-
+*/
     ///////////////////////////////////////////////// 소개 페이지 /////////////////////////////////////////////////
     @GetMapping("/explain")
     public String explain(){
@@ -87,6 +88,7 @@ public class MainController {
 
 
     ///////////////////////////////////////////////// 로그인 페이지 /////////////////////////////////////////////////
+    /* 기능 구현 과정 중 에러가 너무 뜨는 관계로 폐기
     @GetMapping("/login")
     public String login() {
 
@@ -121,7 +123,7 @@ public class MainController {
         return "login";
     }
 
-
+*/
     ///////////////////////////////////////////////// 동국이 사진 올리기 /////////////////////////////////////////////////
     @GetMapping("/location/write")
     public String listwrite(){

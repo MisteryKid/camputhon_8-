@@ -7,6 +7,7 @@
     <title>explain</title>
 
     <link rel="stylesheet" th:href="@{/css/explain.css}">
+    <link rel="stylesheet" th:href="@{/css/write2.css}">
     <script th:src="@{/js/write.js}"></script>
 
 
@@ -16,21 +17,20 @@
 <!-- 상단 바 (로고 + 위치,병원,후원)-->
 <header>
     <div class="texts">
-            <span class="logo">
-                <img class="info-picture" th:src="@{/files/cat/logo_final.png}" style="width: 20%">
-
+            <span class="logo_loca">
+                <img class="info-picture" th:src="@{/files/cat/logo_final.png}" style="width: 20%" >
             </span>
         <!-- 여기 고침 : div -> ol -->
         <span>
                 <ol class="buttons">
-                    <li class="button"> <a th:href="@{/cat/location}">어딨냥!</a></li>
-                    <li class="button"><a th:href="@{/cat/hospital}">모이라냥</a></li>
-                    <li class="button"> <a th:href="@{/cat/donate}">배고프다냥</a></li>
-
+                    <li class="button"> <a th:href="@{/cat/explain}">집이다냥</a> </li>
+                    <li class="button"> <a th:href="@{/cat/location}">찾아달라냥</a> </li>
+                    <li class="button"> <a th:href="@{/cat/hospital}">친해지자냥</a> </li>
                 </ol>
             </span>
     </div>
 </header>
+
 <div class="contents">
     <div class="frame">
         <!-- 추가 profile 1 -->
@@ -62,12 +62,11 @@
         </div>
 
     </div>
+
+
     </contents>
 
-    <div class="paw-prints">
-        <img th:src="@{/files/cat/logo.png}" alt="Paw Print" class="paw-print">
-        <!-- 더 많은 발자국 이미지 추가 가능 -->
-    </div>
+
 
 
     <!-- 하단 바 -->
