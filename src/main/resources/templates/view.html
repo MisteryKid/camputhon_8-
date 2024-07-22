@@ -29,22 +29,24 @@
 </header>
 
 
+<div class="frame" ></div>
 
-  <h1 th:text="${cat.title}">제목입니다.</h1>
-  <p th:text="${cat.content}">내용</p>
+<h1 th:text="${cat.title}">제목입니다.</h1>
+<p th:text="${cat.content}">내용</p>
 
 
+<div class="box">
+    <img th:src="@{${cat.filepath}}" alt="이미지" style="max-width: 20%; height: auto;">
 
-<img th:src="@{${cat.filepath}}" alt="이미지" style="max-width: 50%; height: auto;">
+    <a th:href="@{/cat/location/delete(id=${cat.id})}">글 삭제</a>
 
-<a th:href="@{/cat/location/delete(id=${cat.id})}">글 삭제</a>
-
-<a th:href="@{/cat/location/modify/{id}(id=${cat.id})}">수정</a>
-<!--<img th:src="@{/files/09d1a264-544d-49c2-8fe7-b5145969bc84_동국대.png}" alt="Cat Image">
-<img th:src="@{/files/pic.png}">
-<img th:src="@{${cat.filepath}}" alt="Cat Image">
-  <a th:href="@{${cat.filepath}}">사진</a>
--->
+    <a th:href="@{/cat/location/modify/{id}(id=${cat.id})}">수정</a>
+    <!--<img th:src="@{/files/09d1a264-544d-49c2-8fe7-b5145969bc84_동국대.png}" alt="Cat Image">
+    <img th:src="@{/files/pic.png}">
+    <img th:src="@{${cat.filepath}}" alt="Cat Image">
+      <a th:href="@{${cat.filepath}}">사진</a>
+    -->
+</div>
 
 <div>
   <ul>
@@ -53,6 +55,8 @@
     </li>
 
   </ul>
+</div>
+
 </div>
 
 

@@ -6,37 +6,46 @@
 
 html {
     font-family: "Jua", sans-serif;
+    font-size: 50px;
+    color:#FFD8BE;
 }
+
 strong {
-    font-size: 50px
+    font-size: 150px;
+    color: #E88D67;
 }
 body {
     background: #ffeedd;
-    display: flex;;
+    display: flex;
 }
 
 .image {
     flex: 1;
     text-align: center;
+    height: 600px;
 }
 
 .text {
     flex: 1;
-    padding-top: 300px;
-    padding-left: 150px;
+    padding-top: 100px;
+    padding-left: 140px;
 }
 
 .text > h1 {
     display: block;
     border: 50px;
     text-align: left;
-    line-height: 150px;
+    line-height: 160px;
 }
 .text > a {
-    padding: 5px;
-    border-radius: 10px;
-    background: #ffd8be ;
+    padding: 7px;
+    border-radius: 18px;
+    background: #ffd8be;
     font-size: 20px;
     text-decoration: none;
-    color: orange;
+    color: #ffffff;
+}
+
+.text > a:hover {
+    color: #D07B5B;
 }

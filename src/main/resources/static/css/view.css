@@ -61,3 +61,7 @@ a.delete, a.modify {
 a.delete:hover, a.modify:hover {
     color: #666;
 }
+
+.frame {
+    margin: 0 auto;
+}
