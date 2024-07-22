@@ -1,8 +1,8 @@
 /* write.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 /* 전체 스타일 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Jua", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F8F7FF;
@@ -71,9 +71,10 @@ button[type="submit"] {
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
+
 }
 
 button[type="submit"]:hover {

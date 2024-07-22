@@ -65,7 +65,7 @@ public class MainController {
     }
 
     ///////////////////////////////////////////////// 병원 /////////////////////////////////////////////////
-    @GetMapping("/hospital")
+    @GetMapping("/friends")
     public String hospital(){
 
         return "friends";

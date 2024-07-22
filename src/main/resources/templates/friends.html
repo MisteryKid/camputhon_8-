@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>friend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/css/write2.css}">
+    <link rel="stylesheet" th:href="@{/css/friends.css}">
+</head>
+
+<body>
+<!-- 상단 바 (로고 + 위치,병원,후원)-->
+
+<header>
+    <div class="texts">
+            <span class="logo_loca">
+                <img class="info-picture" th:src="@{/files/cat/logo_final.png}" style="width: 20%" >
+            </span>
+        <!-- 여기 고침 : div -> ol -->
+        <span>
+                <ol class="buttons">
+                    <li class="button"> <a th:href="@{/cat/explain}">집이다냥</a> </li>
+                    <li class="button"> <a th:href="@{/cat/location}">찾아달라냥</a> </li>
+                    <li class="button"> <a th:href="@{/cat/friends}">친해지자냥</a> </li>
+                </ol>
+            </span>
+    </div>
+</header>
+<!-- contents 내용 allprofiles(profile1 + profile2 + ...)-->
+<div class="contents">
+    <contents class="frame">
+
+        <!-- box1 -->
+        <div class="box">
+            <div class="box_date">♥</div>
+            <div class="box_body">
+                <img th:src="@{/files/cat/loveme.png}">
+                <div class="loca_descri">
+                    <div class="location">
+                        <img th:src="@{/files/cat/logo.png}">
+                        <span> 쓰다듬어달라냥! </span>
+                    </div>
+                    <div class="description">
+                        사람들의 따뜻한 손길 좋다냥
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- box2 -->
+        <div class="box">
+            <div class="box_date">♥</div>
+            <div class="box_body">
+
+                <img th:src="@{/files/cat/feedme.png}">
+                <div class="loca_descri">
+                    <div class="location">
+                        <img th:src="@{/files/cat/logo.png}">
+                        <span> 츄르 맛있다냥! </span>
+                    </div>
+                    <div class="description">
+                        츄르 먹을 때마다 행복해다냥
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- box3 -->
+        <div class="box">
+            <div class="box_date">♥</div>
+            <div class="box_body">
+                <img th:src="@{/files/cat/foodme.png}">
+                <div class="loca_descri">
+                    <div class="location">
+                        <img th:src="@{/files/cat/logo.png}">
+                        <span> 사료도 좋다냥! </span>
+                    </div>
+                    <div class="description">
+                        덕분에 항상 배부르다냥
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_date">No!</div>
+            <div class="box_body">
+                <img th:src="@{/files/cat/choco.png}">
+                <div class="loca_descri">
+                    <div class="location">
+                        <img th:src="@{/files/cat/logo.png}">
+                        <span> 초콜릿은 위험하다냥! </span>
+                    </div>
+                    <div class="description">
+                        초콜릿 먹으면 위험할 수 있다냥
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_date">No!</div>
+            <div class="box_body">
+                <img th:src="@{/files/cat/coffee.png}">
+                <div class="loca_descri">
+                    <div class="location">
+                        <img th:src="@{/files/cat/logo.png}">
+                        <span> 초콜릿은 위험하다냥! </span>
+                    </div>
+                    <div class="description">
+                        커피 의사선생님이 조심하라 하셨다냥 ㅠㅠ
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </contents>
+</div>
+<!-- 하단 바 -->
+<footer>
+    <div class="texts">
+        <p> 동국이를 찾아라</p>
+        <p> 개발자 없는 개발자 팀</p>
+        <p> 추가문의 032 - 851 - 0369</p>
+    </div>
+</footer>
+</body>
+</html>
